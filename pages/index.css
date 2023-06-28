@@ -19,6 +19,9 @@
     
     height: 52px !important;
 } */
+.slider-wrapper {
+    height: 50vw !important;
+}
 .hero-content {
     aspect-ratio: 16/9;
     border: solid 1px red;
@@ -397,6 +400,11 @@
 .hero-button {
     height: 3vw !important;
     font-size: 1.2vw !important;
+}
+.hero-next-btn button {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0px !important;
 }
 /* .css-1ixjij4 label {
     font-size: 0.7vw !important;

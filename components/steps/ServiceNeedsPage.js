@@ -199,14 +199,16 @@ const ServiceNeedsPage = ({ onNextStep }) => {
               </Box>
             )} */}
             {!isDisabled && (
-              <NextButton
-                mt={2}
-                type="submit"
-                isDisabled={isDisabled}
-                onClick={onNextStep}
-              >
-                Next
-              </NextButton>
+              <div className="hero-next-btn">
+                <NextButton
+                  mt={2}
+                  type="submit"
+                  isDisabled={isDisabled}
+                  onClick={onNextStep}
+                >
+                  Next
+                </NextButton>
+              </div>
             )}
           </GridItem>
         </GridWrapper>

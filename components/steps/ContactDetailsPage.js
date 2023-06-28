@@ -482,7 +482,7 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
             }}
           >
             {/* <Grid mt={[12, 12, 20]} gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]} gridGap={3}> */}
-              <Carousel infiniteLoop className="hero-business2-form">
+              <Carousel infiniteLoop>
                 <Box mt={12}>
                   <Heading as="h2" size="h3" gridColumn={"1 / -1"} className="hero-h2">
                     Tell us about yourself
@@ -564,10 +564,10 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
                   <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={12} className="hero-h2">
                     How soon do you require assistance
                   </Heading>
-                  <Text gridColumn={"1 / -1"} mb={2} className="hero-text">
+                  <Text gridColumn={"1 / -1"} mb={12} className="hero-text">
                     Enter your preferred insurance start date
                   </Text>
-                  <InputDatePicker id="insurance_start_date" label="Date" />
+                  <InputDatePicker id="insurance_start_date" label="Date" mb={12} />
                 </Box>
                 <Box mt={12}>
                   {user.cover_type && user.cover_type == "Business" && (
@@ -672,15 +672,16 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
                 </Box>
               </Carousel>
             {/* </Grid> */}
-
-            <NextButton
-              mt={12}
-              type="submit"
-              isDisabled={isDisabled}
-              onClick={handleSubmit}
-            >
-              {isLoading ? "Submitting..." : "Send Your Enquiry"}
-            </NextButton>
+            <div className="hero-next-btn">
+              <NextButton
+                mt={2}
+                type="submit"
+                isDisabled={isDisabled}
+                onClick={handleSubmit}
+              >
+                {isLoading ? "Submitting..." : "Send Your Enquiry"}
+              </NextButton>
+            </div>
             {errors.length > 0 && (
               <>
                 {errors.map((error, i) => {

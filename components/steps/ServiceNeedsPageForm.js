@@ -80,7 +80,7 @@ const ServiceNeedsPageForm = ({ onNextStep }) => {
           >
             {user.cover_type && user.cover_type == "Business" && (
               <>
-                <Carousel infiniteLoop className="hero-business-form">
+                <Carousel infiniteLoop>
                   <Box mt={12}>
                     <Heading as="h3" size="h3" className="hero-h2">
                       What industry is your business in?
@@ -173,14 +173,16 @@ const ServiceNeedsPageForm = ({ onNextStep }) => {
               </Box>
             )}
             {!isDisabled && (
-              <NextButton
-                mt={2}
-                type="submit"
-                isDisabled={isDisabled}
-                onClick={onNextStep}
-              >
-                Next
-              </NextButton>
+              <div className="hero-next-btn">
+                <NextButton
+                  mt={2}
+                  type="submit"
+                  isDisabled={isDisabled}
+                  onClick={onNextStep}
+                >
+                  Next
+                </NextButton>
+              </div>
             )}
           </GridItem>
         </GridWrapper>

@@ -48,6 +48,7 @@ export const PrevButton = (props) => {
       leftIcon={<LeftArrow color="currentColor" />}
       iconSpacing={2}
       justifyContent="flex-start"
+      style={{ zIndex: 10000 }}
       {...props}
     >
       {props.children}
