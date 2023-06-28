@@ -4,10 +4,8 @@ import GridWrapper from "../form/shared/GridWrapper";
 const HeaderWrap = (props) => {
   return (
     <Box
-      bg={props.bg ? props.bg : "secondary.50"}
-      borderBottom="1px solid"
-      borderColor="grey.100"
-      style={{ display: "flex", alignItems: 'center' }}
+      // bg={props.bg ? props.bg : "secondary.50"}
+      // style={{ display: "flex", alignItems: 'center' }}
     >
       <div>
         <GridItem
@@ -17,7 +15,7 @@ const HeaderWrap = (props) => {
           pb={[12, 12, 20]}
           {...props}
         >
-          <NavyBox.Large>{props.children} </NavyBox.Large>
+          <NavyBox.Small>{props.children} </NavyBox.Small>
         </GridItem>
       </div>
     </Box>

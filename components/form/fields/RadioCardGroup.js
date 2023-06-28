@@ -28,7 +28,7 @@ const RadioCardGroup = ({ options, groupName, onChange }) => {
         return (
           <RadioCard key={option.value} {...radio}>
             {option.iconComponent}
-            <Text pt={4} textStyle="radioCard">
+            <Text pt={4} textStyle="radioCard" className="hero-h3">
               {option.value}
             </Text>
           </RadioCard>
@@ -44,7 +44,7 @@ function RadioCard(props) {
   const input = getInputProps();
   const checkbox = getCheckboxProps();
   return (
-    <Box as="label" width={["100%", "auto"]}>
+    <Box as="label" width={["100%", "auto"]} className="hero-kind">
       <input {...input} aria-label={props.value} />
       <Box
         {...checkbox}
@@ -65,9 +65,9 @@ function RadioCard(props) {
           borderColor: "grey.200",
           textDecoration: "underline",
         }}
-        px={[3, 4, 5]}
-        py={[5, 7, 7]}
-        minW={["100%", "180px", "180px"]}
+        px={[1, 2, 4]}
+        py={[3, 3, 6]}
+        // minW={["100%", "180px", "180px"]}
         as={Stack}
         flexDirection="column"
         justifyContent="center"

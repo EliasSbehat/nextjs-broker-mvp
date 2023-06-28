@@ -22,6 +22,7 @@ import InputPostcode from "../components/form/fields/InputPostcode";
 import ProgressBar from "../components/global/ProgressBar";
 import ResultsPage from "../components/steps/ResultsPage";
 import ServiceNeedsPage from "../components/steps/ServiceNeedsPage";
+import ServiceNeedsPageForm from "../components/steps/ServiceNeedsPageForm";
 import ContactDetailsPage from "../components/steps/ContactDetailsPage";
 import SuccessPage from "../components/steps/SuccessPage";
 import { getDistanceBetween } from "../util/getDistanceBetween";
@@ -327,6 +328,9 @@ export default function IndexPage() {
         />
         <link rel="icon" href="/find-a-broker/favicon.png" />
       </Head>
+      {app.step > 1 && app.step <= app.stepNames.length && (
+        <ProgressBar step={app.step - 2} multiFormSteps={3} />
+      )}{" "}
       <div className="container">
         <div className="content">
           {app.step === 0 && (
@@ -417,10 +421,8 @@ export default function IndexPage() {
                   </div>{" "}
                 </div>
           )}{" "}
-          {app.step > 1 && app.step <= app.stepNames.length && (
-            <ProgressBar step={app.step - 2} multiFormSteps={3} />
-          )}{" "}
-          {app.step > 0 && app.step <= app.stepNames.length - 2 && (
+          
+          {app.step > 0 && app.step <= app.stepNames.length - 1 && (
             <Box style={{ position: 'absolute', width: '100%' }}>
               <div>
                 <GridItem
@@ -459,13 +461,19 @@ export default function IndexPage() {
             />
           )}{" "}
           {app.step === 3 && (
+            <ServiceNeedsPageForm
+              selectedResult={selectedResult}
+              onNextStep={handleServiceNeedsSubmit}
+            />
+          )}{" "}
+          {app.step === 4 && (
             <ContactDetailsPage
               selectedResult={selectedResult}
               onSubmit={handleContactDetailsSubmit}
               errors={errors}
             />
           )}{" "}
-          {app.step === 4 && (
+          {app.step === 5 && (
             <SuccessPage
               postcode={postcode}
               selectedResult={selectedResult}

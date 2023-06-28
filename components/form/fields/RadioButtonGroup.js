@@ -117,10 +117,11 @@ function RadioButton(props) {
           borderColor: "grey.200",
           px: "15px",
         }}
-        h={"52px"}
+        style={{ padding: "1vw" }}
+        className="hero-input"
       >
         {input.checked ? <Checked /> : <UnChecked />}
-        <Text textStyle="radioButton">{props.children}</Text>
+        <Text textStyle="radioButton" className="hero-text">{props.children}</Text>
       </Flex>
     </Box>
   );

@@ -7,6 +7,7 @@ import {
   Text,
   GridItem,
   Grid,
+  Flex,
   Accordion,
   AccordionItem,
   AccordionPanel,
@@ -15,6 +16,8 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import GridWrapper from "../form/shared/GridWrapper";
 import HeaderWrap from "../content/HeaderWrap";
 import CGUBanner from "../content/CGUBanner";
@@ -469,16 +472,6 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
 
   return (
     <>
-      <HeaderWrap>
-        <Heading as="h1" size="h1">
-          Connect with a broker
-        </Heading>
-        <Text mt={8} maxW={"540px"}>
-          Simply enter your details and any relevant information you are seeking
-          from brokers in the form below and the team from{" "}
-          <b>{selectedResult.title}</b> will get back to you shortly.
-        </Text>
-      </HeaderWrap>
       <form onSubmit={handleSubmit} autoComplete="on">
         <GridWrapper>
           <GridItem
@@ -488,180 +481,197 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
               lg: "3 / span 9",
             }}
           >
-            <Grid
-              mt={[12, 12, 20]}
-              gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]}
-              gridGap={3}
-            >
-              <Heading as="h2" size="h3" gridColumn={"1 / -1"}>
-                Tell us about yourself
-              </Heading>
-
-              <InputFloating
-                id="first_name"
-                label="First Name"
-                autoComplete="given-name"
-                validate={(i) => {
-                  let x = /^[a-zA-Z]+(-[a-zA-Z]+)?$/.test(i);
-                  return x;
-                }}
-                errors={{
-                  missing: "First name is required",
-                  invalid: "This field is invalid",
-                }}
-                required
-              />
-              <InputFloating
-                id="last_name"
-                label="Last Name"
-                autoComplete="family-name"
-                validate={(i) => {
-                  let x = /^[a-zA-Z]+(-[a-zA-Z]+)?$/.test(i);
-                  return x;
-                }}
-                errors={{
-                  missing: "Last name is required",
-                  invalid: "This field is invalid",
-                }}
-                required
-              />
-              <InputFloating
-                id="email"
-                label="Email"
-                autoComplete="email"
-                validate={(i) => {
-                  let x =
-                    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-                      i
-                    );
-                  return x;
-                }}
-                errors={{
-                  missing: "Email is required",
-                  invalid: "This email is invalid",
-                }}
-                required
-              />
-              <InputFloating
-                id="phone"
-                label="Phone Number"
-                autoComplete="phone"
-                validate={(i) => {
-                  let x =
-                    /^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$/.test(
-                      i
-                    );
-                  return x;
-                }}
-                errors={{
-                  missing: "Phone number is required",
-                  invalid: "This number is invalid",
-                }}
-                required
-              />
-
-              <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={12}>
-                How soon do you require assistance
-              </Heading>
-              <Text gridColumn={"1 / -1"}>
-                Enter your preferred insurance start date
-              </Text>
-              <InputDatePicker id="insurance_start_date" label="Date" />
-
-              {user.cover_type && user.cover_type == "Business" && (
-                <Box gridColumn={"1 / -1"} mt={12}>
-                  <Heading as="h3" size="h3">
-                    What type(s) of insurance does your business require?
+            {/* <Grid mt={[12, 12, 20]} gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]} gridGap={3}> */}
+              <Carousel infiniteLoop className="hero-business2-form">
+                <Box mt={12}>
+                  <Heading as="h2" size="h3" gridColumn={"1 / -1"} className="hero-h2">
+                    Tell us about yourself
                   </Heading>
-                  <HelpModalBusiness />
+                  <Grid sx={{
+                      gridTemplateColumns: ["1fr", "1fr", "1fr", "1fr 1fr"],
+                      gridGap: 2,
+                      mt: 2,
+                  }}>
+                    <InputFloating
+                      className="hero-required-input"
+                      id="first_name"
+                      label="First Name"
+                      autoComplete="given-name"
+                      validate={(i) => {
+                        let x = /^[a-zA-Z]+(-[a-zA-Z]+)?$/.test(i);
+                        return x;
+                      }}
+                      errors={{
+                        missing: "First name is required",
+                        invalid: "This field is invalid",
+                      }}
+                      required
+                    />
+                    <InputFloating
+                      className="hero-required-input"
+                      id="last_name"
+                      label="Last Name"
+                      autoComplete="family-name"
+                      validate={(i) => {
+                        let x = /^[a-zA-Z]+(-[a-zA-Z]+)?$/.test(i);
+                        return x;
+                      }}
+                      errors={{
+                        missing: "Last name is required",
+                        invalid: "This field is invalid",
+                      }}
+                      required
+                    />
+                    <InputFloating
+                      className="hero-required-input"
+                      id="email"
+                      label="Email"
+                      autoComplete="email"
+                      validate={(i) => {
+                        let x =
+                          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+                            i
+                          );
+                        return x;
+                      }}
+                      errors={{
+                        missing: "Email is required",
+                        invalid: "This email is invalid",
+                      }}
+                      required
+                    />
+                    <InputFloating
+                      className="hero-required-input"
+                      id="phone"
+                      label="Phone Number"
+                      autoComplete="phone"
+                      validate={(i) => {
+                        let x =
+                          /^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$/.test(
+                            i
+                          );
+                        return x;
+                      }}
+                      errors={{
+                        missing: "Phone number is required",
+                        invalid: "This number is invalid",
+                      }}
+                      required
+                    />
+                  </Grid>
                 </Box>
-              )}
-              {user.cover_type && user.cover_type == "Personal" && (
-                <Box gridColumn={"1 / -1"} mt={12}>
-                  <Heading as="h3" size="h3">
-                    What type(s) of insurance do you require?
+                <Box mt={12}>
+                  <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={12} className="hero-h2">
+                    How soon do you require assistance
                   </Heading>
-                  <Text mt={2}>
-                    Select as many of the options that apply to you
+                  <Text gridColumn={"1 / -1"} mb={2} className="hero-text">
+                    Enter your preferred insurance start date
                   </Text>
-                  <HelpModalPersonal />
+                  <InputDatePicker id="insurance_start_date" label="Date" />
                 </Box>
-              )}
-              <CheckboxButtonGroup
-                options={
-                  user.cover_type && user.cover_type == "Business"
-                    ? insuranceTypeBusinessOptions
-                    : insuranceTypePersonalOptions
-                }
-                groupName="insurance_type"
-                groupSX={{
-                  gridTemplateColumns: ["1fr", "1fr", "1fr 1fr", "1fr 1fr 1fr"],
-                  gridGap: 3,
-
-                  gridColumn: "1 / -1",
-                }}
-              />
-              <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={12}>
-                How would you like to be contacted?
-              </Heading>
-              <Text gridColumn={"1 / -1"}>
-                If you select to be contacted via phone call, you consent to us
-                sharing your contact details with your selected broker for the
-                purpose of the broker calling you about the insurance products
-                you have selected above.
-              </Text>
-              <RadioButtonGroup
-                options={["Email", "Phone"]}
-                groupName="contact_type"
-                groupSX={{
-                  gridTemplateColumns: ["1fr", "1fr", "1fr 1fr", "1fr 1fr 1fr"],
-                  gridGap: 3,
-
-                  gridColumn: "1 / -1",
-                }}
-                radioTrigger={{
-                  option: "Phone",
-                  currentState: radioTrigger,
-                  callBack: setRadioTrigger,
-                }}
-              />
-              {radioTrigger && (
-                <>
-                  <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={12}>
-                    When would you like to be contacted?
-                  </Heading>
-                  <Text gridColumn={"1 / -1"}>All times are in AEST</Text>
-                  <RadioButtonGroup
-                    options={["Anytime", "9am-12pm", "12pm-3pm", "3pm-5pm"]}
-                    groupName="contact_time"
+                <Box mt={12}>
+                  {user.cover_type && user.cover_type == "Business" && (
+                    <Grid>
+                      <Heading as="h3" size="h3" className="hero-h2">
+                        What type(s) of insurance does your business require?
+                      </Heading>
+                      <HelpModalBusiness />
+                    </Grid>
+                  )}
+                  {user.cover_type && user.cover_type == "Personal" && (
+                    <Grid>
+                      <Heading as="h3" size="h3" className="hero-h2">
+                        What type(s) of insurance do you require?
+                      </Heading>
+                      <Text mt={2} className="hero-text">
+                        Select as many of the options that apply to you
+                      </Text>
+                      <HelpModalPersonal />
+                    </Grid>
+                  )}
+                  <CheckboxButtonGroup
+                    options={
+                      user.cover_type && user.cover_type == "Business"
+                        ? insuranceTypeBusinessOptions
+                        : insuranceTypePersonalOptions
+                    }
+                    groupName="insurance_type"
                     groupSX={{
-                      gridTemplateColumns: [
-                        "1fr",
-                        "1fr",
-                        "1fr 1fr",
-                        "1fr 1fr 1fr",
-                      ],
+                      gridTemplateColumns: ["1fr", "1fr 1fr", "1fr 1fr", "1fr 1fr"],
                       gridGap: 3,
+
                       gridColumn: "1 / -1",
                     }}
                   />
-                </>
-              )}
-              <Heading
-                as="h2"
-                size="h3"
-                id="messageLabel"
-                gridColumn={"1 / -1"}
-                mt={12}
-              >
-                Leave a message
-              </Heading>
-              <Text gridColumn={"1 / -1"}>
-                Let us know if there is any other important information you’d
-                like to pass on to your selected broker at this stage.
-              </Text>
-              <InputTextArea labelid="messageLabel" gridColumn={"1 / -1"} />
-            </Grid>
+                </Box>
+                <Box mt={12}>
+                  <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={12} className="hero-h2">
+                    How would you like to be contacted?
+                  </Heading>
+                  <Text gridColumn={"1 / -1"} className="hero-text" mb={2}>
+                    If you select to be contacted via phone call, you consent to us
+                    sharing your contact details with your selected broker for the
+                    purpose of the broker calling you about the insurance products
+                    you have selected above.
+                  </Text>
+                  {/* <Flex> */}
+                    <RadioButtonGroup
+                      options={["Email", "Phone"]}
+                      groupName="contact_type"
+                      groupSX={{
+                        gridTemplateColumns: ["1fr", "1fr 1fr", "1fr 1fr", "1fr 1fr 1fr"],
+                        gridGap: 3,
+
+                        gridColumn: "1 / -1",
+                      }}
+                      radioTrigger={{
+                        option: "Phone",
+                        currentState: radioTrigger,
+                        callBack: setRadioTrigger,
+                      }}
+                    />
+                  {/* </Flex> */}
+                  {radioTrigger && (
+                    <>
+                      <Heading as="h2" size="h3" gridColumn={"1 / -1"} mt={2} className="hero-h2">
+                        When would you like to be contacted?
+                      </Heading>
+                      <Text gridColumn={"1 / -1"} className="hero-text">All times are in AEST</Text>
+                      <RadioButtonGroup
+                        options={["Anytime", "9am-12pm", "12pm-3pm", "3pm-5pm"]}
+                        groupName="contact_time"
+                        groupSX={{
+                          gridTemplateColumns: [
+                            "1fr 1fr",
+                            "1fr 1fr",
+                            "1fr 1fr",
+                            "1fr 1fr",
+                          ],
+                          gridGap: 3,
+                          gridColumn: "1 / -1",
+                        }}
+                      />
+                    </>
+                  )}
+                </Box>
+                <Box>
+                  <Heading
+                    as="h2"
+                    size="h3"
+                    id="messageLabel"
+                    gridColumn={"1 / -1"}
+                    mt={12}
+                  >
+                    Leave a message
+                  </Heading>
+                  <Text gridColumn={"1 / -1"}>
+                    Let us know if there is any other important information you’d
+                    like to pass on to your selected broker at this stage.
+                  </Text>
+                  <InputTextArea labelid="messageLabel" gridColumn={"1 / -1"} />
+                </Box>
+              </Carousel>
+            {/* </Grid> */}
 
             <NextButton
               mt={12}
@@ -685,7 +695,17 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
           </GridItem>
         </GridWrapper>
       </form>
-      <CGUBanner />
+      {/* <HeaderWrap>
+        <Heading as="h1" size="h1" className="hero-h2">
+          Connect with a broker
+        </Heading>
+        <Text mt={8} maxW={"490px"} className="hero-text">
+          Simply enter your details and any relevant information you are seeking
+          from brokers in the form below and the team from{" "}
+          <b>{selectedResult.title}</b> will get back to you shortly.
+        </Text>
+      </HeaderWrap> */}
+      {/* <CGUBanner /> */}
     </>
   );
 };

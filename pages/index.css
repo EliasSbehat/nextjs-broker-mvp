@@ -15,6 +15,10 @@
     justify-content: space-around;
     border: solid 1px #e2e8f0;
 }
+/* .hero-required-input, #insurance_start_date, #postcode {
+    
+    height: 52px !important;
+} */
 .hero-content {
     aspect-ratio: 16/9;
     border: solid 1px red;
@@ -46,23 +50,24 @@
 .css-12k8d50 {
     font-size: 1.3vw !important;
 }
+.chakra-input {
+    /* height: 3vw !important; */
+    /* font-size: 1.2vw !important; */
+}
 @media screen and (max-width: 1350px) {
-    .css-h5wsdi input {
-        height: 40px !important;
-    }
     .chakra-button {
         font-size: 13px !important;
     }
     .chakra-button svg {
         height: 17px;
     }
+    .hero-business2-form {
+        height: 450px !important;
+    }
 }
 @media screen and (max-width: 1150px) {
     .css-xdk0uo {
         line-height: 40px !important;
-    }
-    .css-h5wsdi input {
-        height: 35px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -79,6 +84,9 @@
     .css-14ollcw {
         display: none !important;
     }
+    .hero-business2-form {
+        height: 420px !important;
+    }
 }
 @media screen and (max-width: 1014px) {
     .css-xdk0uo {
@@ -89,9 +97,6 @@
     }
     .css-12k8d50 {
         margin-bottom: 8px !important;
-    }
-    .css-h5wsdi input {
-        height: 35px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -111,6 +116,13 @@
     .css-7hr9sj {
         width: 150px !important;
     }
+    .css-ktesiy {
+        margin-top : 0px !important;
+        margin-bottom : 0px !important;
+    }
+    .hero-business2-form {
+        height: 360px !important;
+    }
 }
 @media screen and (max-width: 900px) {
     .css-xdk0uo {
@@ -119,9 +131,6 @@
     }
     .css-12k8d50 {
         margin-bottom: 8px !important;
-    }
-    .css-h5wsdi input {
-        height: 30px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -149,6 +158,33 @@
     .broker-profile-box {
         margin-bottom: 0px !important;
     }
+    .css-18focvx {
+        margin-bottom: 2px !important;
+    }
+    .hero-kind div svg {
+        height: 32px !important;
+    }
+    .css-ir7jip {
+        margin-top: 10px !important;
+    }
+    .hero-business2-form {
+        height: 260px !important;
+    }
+    .chakra-input {
+        /* width: 80px !important; */
+    }
+    .hero-success-h1 {
+        font-size: 35px !important;
+    }
+}
+@media screen and (max-width: 700px) {
+    .hero-required-input, #insurance_start_date, #postcode {
+        
+        height: 40px !important;
+    }
+    .css-1ixjij4 label {
+        font-size: 10px !important;
+    }
 }
 @media screen and (max-width: 650px) {
     .css-xdk0uo {
@@ -160,9 +196,6 @@
     }
     .css-12k8d50 {
         margin-bottom: 3px !important;
-    }
-    .css-h5wsdi input {
-        height: 23px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -182,6 +215,22 @@
     .css-2q2xpi, .css-fylf1x {
         min-width: 140px !important;
     }
+    .css-w8olqy {
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+    }
+    .hero-input div svg {
+        height: 10px !important;
+    }
+    .hero-business2-form {
+        height: 220px !important;
+    }
+    .hero-success-h1 {
+        font-size: 25px !important;
+    }
+    .hero-success-text {
+        font-size: 12px !important;
+    }
 }
 @media screen and (max-width: 600px) {
     .css-xdk0uo {
@@ -190,9 +239,6 @@
     }
     .css-12k8d50 {
         margin-bottom: 3px !important;
-    }
-    .css-h5wsdi input {
-        height: 23px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -209,6 +255,30 @@
     .map-pin-box svg {
         height: 8px !important;
     }
+    .css-vdlvau {
+        margin-top: 2px !important;
+    }
+    .hero-business-form {
+        height: 200px !important;
+    }
+    .hero-business2-form {
+        height: 200px !important;
+    }
+    .hero-required-input, #insurance_start_date, #postcode {
+        
+        height: 30px !important;
+        font-size: 15px !important;
+    }
+    .css-1ixjij4 label {
+        font-size: 7px !important;
+    }
+    .hero-success-h1 {
+        font-size: 23px !important;
+    }
+    .hero-success-text {
+        font-size: 11px !important;
+        margin-top: 10px !important;
+    }
 }
 @media screen and (max-width: 522px) {
     .css-xdk0uo {
@@ -217,9 +287,6 @@
     }
     .css-12k8d50 {
         margin-bottom: 3px !important;
-    }
-    .css-h5wsdi input {
-        height: 23px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -231,6 +298,20 @@
     .css-2qrmgs {
         margin-top: 13px !important;
     }
+    .css-vdlvau {
+        margin-top: 2px !important;
+    }
+    .hero-business2-form {
+        height: 200px !important;
+    }
+    .hero-required-input, #insurance_start_date, #postcode {
+        
+        height: 27px !important;
+        font-size: 12px !important;
+    }
+    .css-1ixjij4 label {
+        font-size: 6px !important;
+    }
 }
 @media screen and (max-width: 512px) {
     .css-xdk0uo {
@@ -239,9 +320,6 @@
     }
     .css-12k8d50 {
         margin-bottom: 3px !important;
-    }
-    .css-h5wsdi input {
-        height: 20px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -262,12 +340,10 @@
     .css-xdk0uo {
         line-height: 12px !important;
         font-weight: 300 !important;
+        margin-top: 3px !important;
     }
     .css-12k8d50 {
         margin-bottom: 3px !important;
-    }
-    .css-h5wsdi input {
-        height: 20px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -283,7 +359,7 @@
         max-width: 480px !important;
     }
     .css-2qrmgs {
-        margin-top: 13px !important;
+        margin-top: 0px !important;
     }
     #postcode-feedback {
         font-size: 10px !important;
@@ -296,6 +372,10 @@
     }
     .broker-box {
         max-width: 350px !important;
+    }
+    .css-h5wsdi label {
+        margin-top: 3px !important;
+        margin-bottom: 3px !important;
     }
 }
 
@@ -317,4 +397,25 @@
 .hero-button {
     height: 3vw !important;
     font-size: 1.2vw !important;
+}
+/* .css-1ixjij4 label {
+    font-size: 0.7vw !important;
+} */
+.css-502kp3 {
+    font-size: 0.7vw !important;
+    margin-top: 1px !important;
+}
+.css-1m0233m {
+    top: 10px !important;
+}
+.css-5ha3lw {
+    top: 10px !important;
+}
+/* .css-1ixjij4 {
+    max-width: 468px !important;
+} */
+
+
+.css-1h5dg14 {
+    top: 12px !important;
 }

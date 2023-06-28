@@ -121,7 +121,7 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
             service the area of the postcode selected
           </p>
         </HelpModal>
-        <div>
+        {/* <div>
           <Heading as="h4" size="h4" mt={0} className="hero-h2">
             Haven&apos;t found what you were looking for?
           </Heading>
@@ -150,10 +150,10 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
             </a>{" "}
             to access more broker options.
           </Text>
-        </div>
+        </div> */}
       </HeaderWrap>
-      <div style={{ position: "relative", display: "flex", alignItems: "center" }} className="step2-right-box">
-        <div>
+      <div style={{ position: "relative", display: "flex" }} className="step2-right-box">
+        <GridItem pt={[8, 8, 20]} pb={[12, 12, 20]}>
           {/* Sort brokers by distance form user */}
           {results.map((broker, index) => {
             return (
@@ -165,7 +165,7 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
               );
             })}
           <CGUBanner />
-        </div>
+        </GridItem>
         {/* List of profiles and CTA as Contact form */}
       </div>
     </>

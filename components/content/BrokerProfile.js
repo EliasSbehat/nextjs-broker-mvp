@@ -83,7 +83,6 @@ function BrokerProfile({ broker, onClick }) {
         borderWidth="1px"
         borderStyle="solid"
         borderColor={"navy.10"}
-        mb={6}
         className="broker-profile-box"
         direction={{ base: "column", md: "row" }}
         justify={{ base: "center", md: "space-between" }}

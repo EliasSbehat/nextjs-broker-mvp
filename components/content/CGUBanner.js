@@ -14,7 +14,7 @@ import RightArrow from "../icons/RightArrow";
 
 function CGUBanner() {
   return (
-    <Box mt={2} bg="primary.500">
+    <Box bg="primary.500">
       <GridWrapper>
         <GridItem
           colSpan={[6, 6, 12]}

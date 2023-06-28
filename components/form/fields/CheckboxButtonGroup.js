@@ -116,7 +116,7 @@ function RadioButton(props) {
         borderColor={"grey.100"}
         px={"16px"}
         alignItems="center"
-        maxW={["488px", "", "none"]}
+        maxW={["388px", "", "551px"]}
         _checked={{
           borderWidth: "2px",
           bg: "grey.50",
@@ -135,10 +135,12 @@ function RadioButton(props) {
           borderColor: "grey.200",
           px: "15px",
         }}
-        h={props.labelH ? props.labelH : "52px"}
+        style={{ padding: "1vw" }}
+        className="hero-input"
+        // h={props.labelH ? props.labelH : "52px"}
       >
         {input.checked ? <Checked /> : <UnChecked />}
-        <Text textStyle="radioButton">{props.children}</Text>
+        <Text textStyle="radioButton" className="hero-text">{props.children}</Text>
       </Flex>
     </Box>
   );

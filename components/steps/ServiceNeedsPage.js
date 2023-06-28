@@ -68,7 +68,7 @@ const ServiceNeedsPage = ({ onNextStep }) => {
         <Heading as="h1" size="h1">
           Help us by answering a few questions about you
         </Heading>
-        <Text mt={8} maxW={"520px"}>
+        <Text mt={8} maxW={"520px"} className="hero-text">
           Please provide a few optional details so that your broker can begin to
           get to know you, and be ready to help you from day one.
         </Text>
@@ -81,10 +81,11 @@ const ServiceNeedsPage = ({ onNextStep }) => {
               md: "3 / span 8",
               lg: "3 / span 9",
             }}
+            pt={[8, 8, 20]} pb={[12, 12, 20]}
             mb={12}
           >
-            <Box mt={[12, 12, 20]}>
-              <Heading as="h3" size="h3">
+            <Box>
+              <Heading as="h3" size="h3" className="hero-h2">
                 What type of cover are you looking for?
               </Heading>
 
@@ -105,7 +106,7 @@ const ServiceNeedsPage = ({ onNextStep }) => {
                 onChange={handleCoverTypeChange}
               />
             </Box>
-            {user.cover_type && user.cover_type == "Business" && (
+            {/* {user.cover_type && user.cover_type == "Business" && (
               <>
                 <Box mt={12}>
                   <Heading as="h3" size="h3">
@@ -196,10 +197,10 @@ const ServiceNeedsPage = ({ onNextStep }) => {
                   labelH={["80px", "", "60px", "52px"]}
                 />
               </Box>
-            )}
+            )} */}
             {!isDisabled && (
               <NextButton
-                mt={12}
+                mt={2}
                 type="submit"
                 isDisabled={isDisabled}
                 onClick={onNextStep}
@@ -210,7 +211,7 @@ const ServiceNeedsPage = ({ onNextStep }) => {
           </GridItem>
         </GridWrapper>
       </form>
-      <CGUBanner />
+      {/* <CGUBanner /> */}
     </>
   );
 };
