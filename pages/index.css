@@ -13,7 +13,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: solid 2px red;
+    border: solid 1px #e2e8f0;
+}
+.hero-content {
+    aspect-ratio: 16/9;
+    border: solid 1px red;
 }
 .broker-image {
     float: right;
@@ -30,19 +34,19 @@
     display: inline-block;
     margin-left: 10px !important;
 }
+.css-xdk0uo {
+    font-size: 2.5vw !important;
+}
+.css-1an5mc4 {
+    font-size: 1.3vw !important;
+}
+.css-h5wsdi label {
+    font-size: 1.6vw !important;
+}
+.css-12k8d50 {
+    font-size: 1.3vw !important;
+}
 @media screen and (max-width: 1350px) {
-    .css-xdk0uo {
-        font-size: 35px !important;
-    }
-    .css-1an5mc4 {
-        font-size: 17px !important;
-    }
-    .css-h5wsdi label {
-        font-size: 19px !important;
-    }
-    .css-12k8d50 {
-        font-size: 17px !important;
-    }
     .css-h5wsdi input {
         height: 40px !important;
     }
@@ -55,17 +59,7 @@
 }
 @media screen and (max-width: 1150px) {
     .css-xdk0uo {
-        font-size: 30px !important;
         line-height: 40px !important;
-    }
-    .css-1an5mc4 {
-        font-size: 14px !important;
-    }
-    .css-h5wsdi label {
-        font-size: 17px !important;
-    }
-    .css-12k8d50 {
-        font-size: 14px !important;
     }
     .css-h5wsdi input {
         height: 35px !important;
@@ -75,12 +69,6 @@
     }
     .chakra-button svg {
         height: 14px;
-    }
-    .broker-search-tool {
-        min-width: 480px !important;
-    }
-    .broker-box {
-        max-width: 480px !important;
     }
     .css-2qrmgs {
         margin-top: 13px !important;
@@ -94,19 +82,12 @@
 }
 @media screen and (max-width: 1014px) {
     .css-xdk0uo {
-        font-size: 25px !important;
         line-height: 25px !important;
     }
     .css-1an5mc4 {
-        font-size: 14px !important;
         margin-top: 8px !important;
     }
-    .css-h5wsdi label {
-        font-size: 17px !important;
-        line-height: 20px !important;
-    }
     .css-12k8d50 {
-        font-size: 14px !important;
         margin-bottom: 8px !important;
     }
     .css-h5wsdi input {
@@ -118,35 +99,25 @@
     .chakra-button svg {
         height: 14px;
     }
-    .broker-search-tool {
-        min-width: 450px !important;
-    }
-    .broker-box {
-        max-width: 450px !important;
-    }
     .chakra-button {
         height: 35px !important;
     }
     .css-2qrmgs {
         margin-top: 13px !important;
     }
+    .css-1uedivm {
+        padding-top: 5px !important;
+    }
+    .css-7hr9sj {
+        width: 150px !important;
+    }
 }
 @media screen and (max-width: 900px) {
     .css-xdk0uo {
-        font-size: 20px !important;
         line-height: 22px !important;
         font-weight: 600 !important;
     }
-    .css-1an5mc4 {
-        font-size: 12px !important;
-        margin-top: 8px !important;
-    }
-    .css-h5wsdi label {
-        font-size: 15px !important;
-        line-height: 20px !important;
-    }
     .css-12k8d50 {
-        font-size: 12px !important;
         margin-bottom: 8px !important;
     }
     .css-h5wsdi input {
@@ -158,35 +129,36 @@
     .chakra-button svg {
         height: 12px;
     }
-    .broker-search-tool {
-        min-width: 450px !important;
-    }
-    .broker-box {
-        max-width: 450px !important;
-    }
     .chakra-button {
         height: 30px !important;
     }
     .css-2qrmgs {
         margin-top: 13px !important;
     }
+    .css-c69crw {
+        margin-bottom: 3px !important;
+    }
+    .css-ktesiy {
+        margin-top: 3px !important;
+        margin-bottom: 3px !important;
+    }
+    .css-16sy36q {
+        margin-top: 3px !important;
+        margin-bottom: 3px !important;
+    }
+    .broker-profile-box {
+        margin-bottom: 0px !important;
+    }
 }
 @media screen and (max-width: 650px) {
     .css-xdk0uo {
-        font-size: 16px !important;
         line-height: 20px !important;
         font-weight: 500 !important;
     }
     .css-1an5mc4 {
-        font-size: 10px !important;
         margin-top: 3px !important;
     }
-    .css-h5wsdi label {
-        font-size: 13px !important;
-        line-height: 16px !important;
-    }
     .css-12k8d50 {
-        font-size: 10px !important;
         margin-bottom: 3px !important;
     }
     .css-h5wsdi input {
@@ -198,35 +170,25 @@
     .chakra-button svg {
         height: 10px;
     }
-    .broker-search-tool {
-        min-width: 450px !important;
-    }
-    .broker-box {
-        max-width: 450px !important;
-    }
     .chakra-button {
         height: 23px !important;
     }
     .css-2qrmgs {
         margin-top: 13px !important;
+    }
+    /* .step2-right-box {
+        width: 65% !important;
+    } */
+    .css-2q2xpi, .css-fylf1x {
+        min-width: 140px !important;
     }
 }
 @media screen and (max-width: 600px) {
     .css-xdk0uo {
-        font-size: 13px !important;
         line-height: 16px !important;
         font-weight: 400 !important;
     }
-    .css-1an5mc4 {
-        font-size: 8px !important;
-        margin-top: 3px !important;
-    }
-    .css-h5wsdi label {
-        font-size: 13px !important;
-        line-height: 16px !important;
-    }
     .css-12k8d50 {
-        font-size: 8px !important;
         margin-bottom: 3px !important;
     }
     .css-h5wsdi input {
@@ -237,12 +199,6 @@
     }
     .chakra-button svg {
         height: 8px;
-    }
-    .broker-search-tool {
-        min-width: 450px !important;
-    }
-    .broker-box {
-        max-width: 450px !important;
     }
     .chakra-button {
         height: 23px !important;
@@ -250,23 +206,16 @@
     .css-2qrmgs {
         margin-top: 13px !important;
     }
+    .map-pin-box svg {
+        height: 8px !important;
+    }
 }
 @media screen and (max-width: 522px) {
     .css-xdk0uo {
-        font-size: 12px !important;
         line-height: 12px !important;
         font-weight: 300 !important;
     }
-    .css-1an5mc4 {
-        font-size: 8px !important;
-        margin-top: 3px !important;
-    }
-    .css-h5wsdi label {
-        font-size: 13px !important;
-        line-height: 16px !important;
-    }
     .css-12k8d50 {
-        font-size: 8px !important;
         margin-bottom: 3px !important;
     }
     .css-h5wsdi input {
@@ -278,12 +227,6 @@
     }
     .chakra-button svg {
         height: 8px;
-    }
-    .broker-search-tool {
-        min-width: 480px !important;
-    }
-    .broker-box {
-        max-width: 480px !important;
     }
     .css-2qrmgs {
         margin-top: 13px !important;
@@ -291,20 +234,36 @@
 }
 @media screen and (max-width: 512px) {
     .css-xdk0uo {
-        font-size: 12px !important;
         line-height: 12px !important;
         font-weight: 300 !important;
     }
-    .css-1an5mc4 {
-        font-size: 8px !important;
-        margin-top: 3px !important;
+    .css-12k8d50 {
+        margin-bottom: 3px !important;
     }
-    .css-h5wsdi label {
-        font-size: 13px !important;
-        line-height: 16px !important;
+    .css-h5wsdi input {
+        height: 20px !important;
+    }
+    .chakra-button {
+        font-size: 11px !important;
+        height: 20px !important;
+    }
+    .chakra-button svg {
+        height: 8px;
+    }
+    .css-2qrmgs {
+        margin-top: 13px !important;
+    }
+    #postcode-feedback {
+        font-size: 10px !important;
+        height: 20px !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .css-xdk0uo {
+        line-height: 12px !important;
+        font-weight: 300 !important;
     }
     .css-12k8d50 {
-        font-size: 8px !important;
         margin-bottom: 3px !important;
     }
     .css-h5wsdi input {
@@ -332,48 +291,30 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .css-xdk0uo {
-        font-size: 12px !important;
-        line-height: 12px !important;
-        font-weight: 300 !important;
-    }
-    .css-1an5mc4 {
-        font-size: 8px !important;
-        margin-top: 3px !important;
-    }
-    .css-h5wsdi label {
-        font-size: 13px !important;
-        line-height: 16px !important;
-    }
-    .css-12k8d50 {
-        font-size: 8px !important;
-        margin-bottom: 3px !important;
-    }
-    .css-h5wsdi input {
-        height: 20px !important;
-    }
-    .chakra-button {
-        font-size: 11px !important;
-        height: 20px !important;
-    }
-    .chakra-button svg {
-        height: 8px;
-    }
     .broker-search-tool {
-        min-width: 480px !important;
+        min-width: 350px !important;
     }
     .broker-box {
-        max-width: 480px !important;
-    }
-    .css-2qrmgs {
-        margin-top: 13px !important;
-    }
-    #postcode-feedback {
-        font-size: 10px !important;
-        height: 20px !important;
+        max-width: 350px !important;
     }
 }
 
 
-
-
+.css-cyrq5u {
+    font-size: 2vw !important;
+    line-height: initial !important;
+}
+.hero-text {
+    font-size: 1.2vw !important;
+    line-height: initial !important;
+}
+.hero-h2 {
+    font-size: 1.5vw !important;
+}
+.hero-h3 {
+    font-size: 1.3vw !important;
+}
+.hero-button {
+    height: 3vw !important;
+    font-size: 1.2vw !important;
+}

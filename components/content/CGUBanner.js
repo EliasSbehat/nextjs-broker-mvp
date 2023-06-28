@@ -14,21 +14,21 @@ import RightArrow from "../icons/RightArrow";
 
 function CGUBanner() {
   return (
-    <Box mt={16} bg="primary.500">
+    <Box mt={2} bg="primary.500">
       <GridWrapper>
         <GridItem
           colSpan={[6, 6, 12]}
           colStart={["col-start", "col-start", "col-start"]}
-          py={[6, 6, 12]}
+          style={{ display: "flex", gap: "inherit", alignItems: "center" }}
         >
-          <Heading as="h2" size="h2">
+          <Heading as="h3" size="h3" className="hero-h3">
             Proudly brought to you by CGU
           </Heading>
           <BannerButton
             href={`https://www.cgu.com.au/`}
-            mt={[8, 8, 12]}
             icon={<RightArrow color="currentColor" />}
             data-tracking={`link-click:CGUBanner`}
+            style={{ backgroundColor: "transparent", border: "none", minWidth: '100px' }}
           >
             Visit our website
           </BannerButton>

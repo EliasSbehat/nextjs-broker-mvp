@@ -19,7 +19,7 @@ const HelpModal = ({ triggerText, targetTitle, triggerSX, children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <LinkButton onClick={onOpen} mt={4} sx={{ ...triggerSX }} fontSize="14px">
+      <LinkButton onClick={onOpen} mt={1} sx={{ ...triggerSX }} className="hero-text" fontSize="14px" style={{ display: "content" }}>
         {triggerText}
       </LinkButton>
 

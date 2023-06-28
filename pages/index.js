@@ -327,106 +327,102 @@ export default function IndexPage() {
         />
         <link rel="icon" href="/find-a-broker/favicon.png" />
       </Head>
-      {app.step === 0 && (
-        <div className="container">
-          <div className="content">
-            <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-              <div className="broker-content">
-                <Box
-                  sx={{
-                    height: ["auto", "auto", "100%"],
-                    overflow: "hidden",
-                    img: {
-                      height: "100%",
-                      objectFit: "cover",
-                    },
-                  }}
-                >
-                  <Image
-                    className="broker-image"
-                    srcSet={`${imageSizes[0]} 750w, ${imageSizes[1]} 1250w`}
-                    sx={{
-                      width: "50%",
-                    }}
-                    alt=""
-                  />
-                </Box>{" "}
-              </div>{" "}
-              <div className="broker-search-tool">
-                <div>
-                  <Box
-                    className="broker-box"
-                    sx={{
-                      pl: [4, 4, 10],
-                      pr: [4, 4, 10],
-                      py: [4, 4, 10],
-                      height: "auto",
-                      maxWidth: ["", "", "530px"],
-                      borderLeft: "8px solid #00ad20",
-                      bg: "secondary.500",
-                      color: "white",
-                      width: "100%",
-                    }}
-                  >
-                    <ReadTime text="Takes about 4 minutes" />
-                    <Heading
-                      as="h1"
-                      size="h0"
-                      mt={{
-                        base: 4,
-                        md: 8,
+      <div className="container">
+        <div className="content">
+          {app.step === 0 && (
+                <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
+                  <div className="broker-content">
+                    <Box
+                      sx={{
+                        height: ["auto", "auto", "100%"],
+                        overflow: "hidden",
+                        img: {
+                          height: "100%",
+                          objectFit: "cover",
+                        },
                       }}
                     >
-                      Broker <br />
-                      Search Tool{" "}
-                    </Heading>{" "}
-                    <Text
-                      fontSize={["16px", "", "20px"]}
-                      mt={{
-                        base: 4,
-                        md: 8,
-                      }}
-                    >
-                      Use our tool to tell us the type of help you are looking for
-                      and we’ ll find brokers from our network who work in your
-                      local area{" "}
-                    </Text>
-                    <form onSubmit={handlePostcodeSubmit}>
-                      <InputPostcode
-                        id="postcode"
-                        errors={{
-                          missing: "This field is missing",
-                          invalid: "This field is invalid",
-                        }}
+                      <Image
+                        className="broker-image"
+                        srcSet={`${imageSizes[0]} 750w, ${imageSizes[1]} 1250w`}
                         sx={{
-                          mt: 8,
+                          width: "50%",
                         }}
-                        onPostcodeChange={handlePostcodeChange}
-                      />{" "}
-                      <NextButton
-                        data-tracking="link-click:getStarted"
-                        isDisabled={!postcodeIsValid}
-                        type="submit"
-                        style={{ marginTop: "7px" }}
+                        alt=""
+                      />
+                    </Box>{" "}
+                  </div>{" "}
+                  <div className="broker-search-tool">
+                    <div>
+                      <Box
+                        className="broker-box"
+                        sx={{
+                          pl: [4, 4, 10],
+                          pr: [4, 4, 10],
+                          py: [4, 4, 10],
+                          height: "auto",
+                          maxWidth: ["", "", "530px"],
+                          borderLeft: "8px solid #00ad20",
+                          bg: "secondary.500",
+                          color: "white",
+                          width: "100%",
+                        }}
                       >
-                        Get Started{" "}
-                      </NextButton>{" "}
-                    </form>{" "}
-                  </Box>{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>
-          </div>
-        </div>
-      )}{" "}
-      {app.step > 1 && app.step <= app.stepNames.length && (
-        <ProgressBar step={app.step - 2} multiFormSteps={3} />
-      )}{" "}
-      {app.step > 0 && app.step <= app.stepNames.length - 2 && (
-        // <div className="container">
-        //   <div className="content">
-            <Box bg={"secondary.50"}>
-              <GridWrapper>
+                        <ReadTime text="Takes about 4 minutes" />
+                        <Heading
+                          as="h1"
+                          size="h0"
+                          mt={{
+                            base: 4,
+                            md: 8,
+                          }}
+                        >
+                          Broker <br />
+                          Search Tool{" "}
+                        </Heading>{" "}
+                        <Text
+                          fontSize={["16px", "", "20px"]}
+                          mt={{
+                            base: 4,
+                            md: 8,
+                          }}
+                        >
+                          Use our tool to tell us the type of help you are looking for
+                          and we’ ll find brokers from our network who work in your
+                          local area{" "}
+                        </Text>
+                        <form onSubmit={handlePostcodeSubmit}>
+                          <InputPostcode
+                            id="postcode"
+                            errors={{
+                              missing: "This field is missing",
+                              invalid: "This field is invalid",
+                            }}
+                            sx={{
+                              mt: 8,
+                            }}
+                            onPostcodeChange={handlePostcodeChange}
+                          />{" "}
+                          <NextButton
+                            data-tracking="link-click:getStarted"
+                            isDisabled={!postcodeIsValid}
+                            type="submit"
+                            style={{ marginTop: "7px" }}
+                          >
+                            Get Started{" "}
+                          </NextButton>{" "}
+                        </form>{" "}
+                      </Box>{" "}
+                    </div>{" "}
+                  </div>{" "}
+                </div>
+          )}{" "}
+          {app.step > 1 && app.step <= app.stepNames.length && (
+            <ProgressBar step={app.step - 2} multiFormSteps={3} />
+          )}{" "}
+          {app.step > 0 && app.step <= app.stepNames.length - 2 && (
+            <Box style={{ position: 'absolute', width: '100%' }}>
+              <div>
                 <GridItem
                   colSpan={[6, 6, 12]}
                   colStart={["col-start", "col-start", "col-start"]}
@@ -436,7 +432,7 @@ export default function IndexPage() {
                       pt: 8,
                       pb: [3, 3, 4],
                       borderBottomStyle: "solid",
-                      borderBottomWidth: "1px",
+                      borderBottomWidth: "0px",
                       borderBottomColor: "grey.200",
                     }}
                   >
@@ -450,36 +446,36 @@ export default function IndexPage() {
                     </PrevButton>{" "}
                   </Box>{" "}
                 </GridItem>{" "}
-              </GridWrapper>{" "}
+              </div>{" "}
             </Box>
-        //   </div>
-        // </div>
-      )}{" "}
-      {app.step === 1 && (
-        <ResultsPage postcode={postcode} onSelectResult={handleResultSelect} />
-      )}{" "}
-      {app.step === 2 && (
-        <ServiceNeedsPage
-          selectedResult={selectedResult}
-          onNextStep={handleServiceNeedsSubmit}
-        />
-      )}{" "}
-      {app.step === 3 && (
-        <ContactDetailsPage
-          selectedResult={selectedResult}
-          onSubmit={handleContactDetailsSubmit}
-          errors={errors}
-        />
-      )}{" "}
-      {app.step === 4 && (
-        <SuccessPage
-          postcode={postcode}
-          selectedResult={selectedResult}
-          serviceNeeds={serviceNeeds}
-          contactDetails={contactDetails}
-          onReset={resetForm}
-        />
-      )}{" "}
+          )}{" "}
+          {app.step === 1 && (
+            <ResultsPage postcode={postcode} onSelectResult={handleResultSelect} />
+          )}{" "}
+          {app.step === 2 && (
+            <ServiceNeedsPage
+              selectedResult={selectedResult}
+              onNextStep={handleServiceNeedsSubmit}
+            />
+          )}{" "}
+          {app.step === 3 && (
+            <ContactDetailsPage
+              selectedResult={selectedResult}
+              onSubmit={handleContactDetailsSubmit}
+              errors={errors}
+            />
+          )}{" "}
+          {app.step === 4 && (
+            <SuccessPage
+              postcode={postcode}
+              selectedResult={selectedResult}
+              serviceNeeds={serviceNeeds}
+              contactDetails={contactDetails}
+              onReset={resetForm}
+            />
+          )}{" "}
+        </div>
+      </div>
       <Footer disclaimer={true} />{" "}
     </Layout>
   );

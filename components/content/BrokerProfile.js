@@ -78,36 +78,35 @@ function BrokerProfile({ broker, onClick }) {
     onClick(broker);
   };
   return (
-    <Box mt={[8, 8, 16]}>
+    <Box>
       <Flex
         borderWidth="1px"
         borderStyle="solid"
         borderColor={"navy.10"}
-        minH={"60px"}
         mb={6}
+        className="broker-profile-box"
         direction={{ base: "column", md: "row" }}
         justify={{ base: "center", md: "space-between" }}
       >
         <Flex
           direction="column"
-          pt={{ base: 2, md: 2 }}
-          pb={{ base: 4, md: 6 }}
+          pt={{ base: 1, md: 1 }}
+          pb={{ base: 2, md: 3 }}
           px={{ base: 4, md: 6 }}
           h="auto"
         >
-          <Heading as="h2" size="h4" fontSize="20px" mb={4}>
+          <Heading className="hero-h2" as="h2" size="h4" fontSize="20px" mb={4}>
             {broker.title}
           </Heading>
           <Flex direction={{ base: "column", sm: "row" }}>
             <Flex
               bg={"grey.50"}
               px={3}
-              py={1}
               justifyContent="flex-start"
               width="max-content"
-              mb={4}
+              mb={2}
             >
-              <Flex>
+              <Flex className="map-pin-box">
                 <MapPin />
                 <Text
                   textTransform="uppercase"
@@ -115,6 +114,7 @@ function BrokerProfile({ broker, onClick }) {
                   fontSize="14"
                   color="secondary.300"
                   ml="1"
+                  className="hero-text"
                 >
                   {broker.location.map((state, index) => (
                     <React.Fragment key={state}>
@@ -152,10 +152,10 @@ function BrokerProfile({ broker, onClick }) {
               </Flex>
             </Flex> */}
           </Flex>
-          <Text mb={{ base: 4, md: 8 }}>{broker.description}</Text>
+          <Text mb={{ base: 2, md: 4 }} className="hero-text">{broker.description}</Text>
           <Flex
-            mb={{ base: 4, md: "0" }}
-            mt={{ base: 8, md: "auto" }}
+            mb={{ base: 2, md: "0" }}
+            mt={{ base: 4, md: "auto" }}
             direction={{ base: "column", sm: "row", md: "column", lg: "row" }}
           >
             <NextButton

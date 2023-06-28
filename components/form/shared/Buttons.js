@@ -9,10 +9,10 @@ export const NextButton = forwardRef(function NextButton(props, ref) {
     <Button
       ref={ref}
       variant="solid"
-      size="md"
-      className="next-button"
+      size="sm"
+      className="next-button hero-button"
       rightIcon={<RightArrow />}
-      iconSpacing={4}
+      iconSpacing={2}
       {...props}
     >
       {props.children}
@@ -24,6 +24,7 @@ export const LinkButton = (props) => {
   return (
     <Button
       variant="link"
+      className="hero-button"
       size="sm"
       leftIcon={
         props.icon ? props.icon : <InformationCircle color="currentColor" />
@@ -65,12 +66,13 @@ export const BannerButton = (props) => {
   return (
     <Button
       variant="navy"
-      size="md"
+      size="sm"
       rightIcon={props.icon}
       iconSpacing={2}
       justifyContent="space-between"
       {...props}
       as={Link}
+      className="hero-button"
     >
       {props.children}
     </Button>

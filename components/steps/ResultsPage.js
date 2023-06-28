@@ -96,12 +96,12 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
         <Heading as="h1" size="h1">
           Here are some great brokers we found for you
         </Heading>
-        <Text mt={8} mb={6} maxW={"480px"}>
+        <Text mt={2} mb={1} maxW={"480px"} className="hero-text">
           You’re using a pilot version of this tool, so it will only provide the
           details for brokers from Willis Towers Watson and Resilium. We’re
           working to add new brokerages in future.
         </Text>
-        <Text mt={2} mb={2} maxW={"480px"}>
+        <Text mt={2} mb={2} maxW={"480px"} className="hero-text">
           <a
             target="_blank"
             rel="noreferrer"
@@ -116,41 +116,16 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
           triggerText="How does the match work?"
           targetTitle="How does the match work?"
         >
-          <p>
+          <p className="hero-text">
             These results are brokers from Resilium and Willis Towers Watson who
             service the area of the postcode selected
           </p>
         </HelpModal>
-      </HeaderWrap>
-      <GridWrapper>
-        <GridItem
-          gridColumn={{
-            base: "col-start / span 6",
-            md: "3 / span 8",
-            lg: "3 / span 6",
-          }}
-        >
-          {/* Sort brokers by distance form user */}
-          {results.map((broker, index) => {
-            return (
-              <BrokerProfile
-                onClick={onSelectResult}
-                broker={broker}
-                key={index}
-              />
-            );
-          })}
-        </GridItem>
-        {/* List of profiles and CTA as Contact form */}
-        <GridItem
-          colSpan={[6, 6, 12]}
-          colStart={["col-start", "col-start", "col-start"]}
-          mt={(0, 0, 8)}
-        >
-          <Heading as="h4" size="h4" mt={0}>
+        <div>
+          <Heading as="h4" size="h4" mt={0} className="hero-h2">
             Haven&apos;t found what you were looking for?
           </Heading>
-          <Text maxW="640px" mt={4}>
+          <Text maxW="640px" mt={2} className="hero-text">
             <a
               target="_blank"
               rel="noreferrer"
@@ -161,7 +136,7 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
             </a>
             .
           </Text>
-          <Text maxW="640px" mt={4}>
+          <Text maxW="640px" mt={2}  className="hero-text">
             If you haven’t found the right match within our current network, you
             may wish to contact an insurance broker of your choice directly or
             try visiting the{" "}
@@ -175,9 +150,24 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
             </a>{" "}
             to access more broker options.
           </Text>
-        </GridItem>
-      </GridWrapper>
-      <CGUBanner />
+        </div>
+      </HeaderWrap>
+      <div style={{ position: "relative", display: "flex", alignItems: "center" }} className="step2-right-box">
+        <div>
+          {/* Sort brokers by distance form user */}
+          {results.map((broker, index) => {
+            return (
+              <BrokerProfile
+                onClick={onSelectResult}
+                broker={broker}
+                key={index}
+              />
+              );
+            })}
+          <CGUBanner />
+        </div>
+        {/* List of profiles and CTA as Contact form */}
+      </div>
     </>
   );
 };

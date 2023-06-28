@@ -7,18 +7,19 @@ const HeaderWrap = (props) => {
       bg={props.bg ? props.bg : "secondary.50"}
       borderBottom="1px solid"
       borderColor="grey.100"
+      style={{ display: "flex", alignItems: 'center' }}
     >
-      <GridWrapper>
+      <div>
         <GridItem
           colSpan={[6, 6, 8]}
           colStart={["col-start", "col-start", 3]}
-          pt={[8, 8, 24]}
-          pb={[12, 12, 24]}
+          pt={[8, 8, 20]}
+          pb={[12, 12, 20]}
           {...props}
         >
           <NavyBox.Large>{props.children} </NavyBox.Large>
         </GridItem>
-      </GridWrapper>
+      </div>
     </Box>
   );
 };
