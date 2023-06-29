@@ -484,7 +484,7 @@ export default function IndexPage() {
           )}{" "}
         </div>
       </div>
-      <Footer disclaimer={true} />{" "}
+      {/* <Footer disclaimer={true} />{" "} */}
     </Layout>
   );
 }

@@ -5,7 +5,7 @@ import Footer from "../components/global/Footer";
 function Layout(props) {
   return (
     <Box maxWidth={"1920px"} m="0 auto" bg={props.bg}>
-      <Navigation fixed={props.fixed} />
+      {/* <Navigation fixed={props.fixed} /> */}
       {props.children}
     </Box>
   );
