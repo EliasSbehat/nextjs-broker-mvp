@@ -427,3 +427,6 @@
 .css-1h5dg14 {
     top: 12px !important;
 }
+.carousel.carousel-slider .control-arrow {
+    background: rgba(0,0,0,0.1) !important;
+}

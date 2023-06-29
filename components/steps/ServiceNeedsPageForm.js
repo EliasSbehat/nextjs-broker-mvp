@@ -75,7 +75,7 @@ const ServiceNeedsPageForm = ({ onNextStep }) => {
               md: "3 / span 8",
               lg: "3 / span 9",
             }}
-            pt={[8, 8, 20]} pb={[12, 12, 20]}
+           pb={[12, 12, 20]}
             mb={12}
           >
             {user.cover_type && user.cover_type == "Business" && (
