@@ -71,6 +71,10 @@
 @media screen and (max-width: 1150px) {
     .css-xdk0uo {
         line-height: 40px !important;
+        letter-spacing: -0.25px !important;
+    }
+    .chakra-heading {
+        letter-spacing: -0.25px !important;
     }
     .chakra-button {
         font-size: 11px !important;
@@ -131,7 +135,6 @@
     .css-xdk0uo {
         line-height: 22px !important;
         font-weight: 600 !important;
-        letter-spacing: -0.25px !important;
     }
     .css-12k8d50 {
         margin-bottom: 8px !important;
