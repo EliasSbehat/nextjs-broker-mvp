@@ -438,6 +438,7 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
     // if (errors.length > 0) {
     //   return;
     // }
+    window.parent.postMessage('EnquirySent',"*");
     onSubmit(e);
   };
 

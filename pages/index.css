@@ -131,6 +131,7 @@
     .css-xdk0uo {
         line-height: 22px !important;
         font-weight: 600 !important;
+        letter-spacing: -0.25px !important;
     }
     .css-12k8d50 {
         margin-bottom: 8px !important;
@@ -398,7 +399,7 @@
     font-size: 1.3vw !important;
 }
 .hero-button {
-    height: 3vw !important;
+    height: 4vw !important;
     font-size: 1.2vw !important;
 }
 .hero-next-btn button {
@@ -429,4 +430,6 @@
 }
 .carousel.carousel-slider .control-arrow {
     background: rgba(0,0,0,0.1) !important;
+    position: fixed !important;
+    height: 40vw !important;
 }
