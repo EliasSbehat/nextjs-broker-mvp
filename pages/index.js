@@ -349,9 +349,9 @@ export default function IndexPage() {
                       <Image
                         className="broker-image"
                         srcSet={`${imageSizes[0]} 750w, ${imageSizes[1]} 1250w`}
-                        sx={{
-                          width: "50%",
-                        }}
+                        // sx={{
+                        //   width: "50%",
+                        // }}
                         alt=""
                       />
                     </Box>{" "}

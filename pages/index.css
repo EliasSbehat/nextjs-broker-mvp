@@ -28,9 +28,11 @@
 }
 .broker-image {
     float: right;
+    /* width: 45vw !important;   */
 }
 .broker-content {
     position: absolute;
+    bottom: 0 !important;
 }
 .broker-content img {
     width: 76%; /* Set the width of the image to 100% */
@@ -69,6 +71,9 @@
     }
 }
 @media screen and (max-width: 1150px) {
+    .broker-content img {
+        width: 69% !important;
+    }
     .css-xdk0uo {
         line-height: 40px !important;
         letter-spacing: -0.25px !important;
@@ -96,6 +101,9 @@
     }
 }
 @media screen and (max-width: 1014px) {
+    .broker-content img {
+        width: 65% !important;
+    }
     .css-xdk0uo {
         line-height: 25px !important;
     }
@@ -132,6 +140,9 @@
     }
 }
 @media screen and (max-width: 900px) {
+    .broker-content img {
+        width: 54% !important;
+    }
     .css-xdk0uo {
         line-height: 22px !important;
         font-weight: 600 !important;
@@ -182,6 +193,16 @@
     }
     .hero-success-h1 {
         font-size: 35px !important;
+    }
+}
+@media screen and (max-width: 850px) {
+    .broker-content img {
+        width: 48% !important;
+    }
+}
+@media screen and (max-width: 780px) {
+    .broker-content img {
+        width: 32% !important;
     }
 }
 @media screen and (max-width: 700px) {
@@ -432,9 +453,10 @@
     top: 12px !important;
 }
 .carousel.carousel-slider .control-arrow {
-    background: rgba(0,0,0,0.1) !important;
+    background: rgb(129 209 132) !important;
     position: fixed !important;
     height: 40vw !important;
+    width: 4vw !important;
     top: 8vw !important;
 }
 .carousel .control-dots .dot {

@@ -164,7 +164,7 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
               />
               );
             })}
-          <CGUBanner />
+          {/* <CGUBanner /> */}
         </GridItem>
         {/* List of profiles and CTA as Contact form */}
       </div>
