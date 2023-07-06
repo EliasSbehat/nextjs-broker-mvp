@@ -33,10 +33,6 @@ import {
   setFormSubmitting,
   filterResults,
 } from "../store";
-const imageSizes = [
-  "/find-a-broker/img/blt-landing-image-mobile.jpg",
-  "/find-a-broker/img/blt-landing-image.jpg",
-];
 
 export default function IndexPage() {
   const dispatch = useDispatch();
@@ -184,8 +180,23 @@ export default function IndexPage() {
       tempErrors,
     };
   };
+  const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
+  useEffect(() => {
+    function updateScreenSize() {
+      setScreenSize({ width: window.innerWidth, height: window.innerHeight });
+    }
 
+    // Add event listener to update screen size on resize
+    window.addEventListener('resize', updateScreenSize);
+
+    // Set initial screen size
+    updateScreenSize();
+
+    // Remove event listener on unmount
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, []);
   const handleContactDetailsSubmit = async (e) => {
+  
     // Prevent the form from submitting normally
     e.preventDefault();
     dispatch(setFormSubmitting(true));
@@ -302,6 +313,10 @@ export default function IndexPage() {
     );
     setContactDetails({});
   };
+  let imageSizes = "/find-a-broker/img/blt-landing-image.jpg";
+  if (screenSize.width < 810) {
+    imageSizes = "/find-a-broker/img/blt-landing-image-mobile1.jpg";
+  }
 
   return (
     <Layout fixed={app.step === 0}>
@@ -348,10 +363,10 @@ export default function IndexPage() {
                     >
                       <Image
                         className="broker-image"
-                        srcSet={`${imageSizes[0]} 750w, ${imageSizes[1]} 1250w`}
-                        // sx={{
-                        //   width: "50%",
-                        // }}
+                        srcSet={`${imageSizes} 750w`}
+                        sx={{
+                          width: "50%",
+                        }}
                         alt=""
                       />
                     </Box>{" "}
