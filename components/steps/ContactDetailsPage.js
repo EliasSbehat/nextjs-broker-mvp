@@ -470,6 +470,9 @@ const ContactDetailsPage = ({ selectedResult, onSubmit, errors }) => {
     setIsDisabled(!checkContactValid() || app.formSubmitting);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, app]);
+  useEffect(() => {
+    window.parent.postMessage('page4',"*");
+  }, []);
 
   return (
     <>

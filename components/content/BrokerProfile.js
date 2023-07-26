@@ -74,6 +74,7 @@ function BrokerProfile({ broker, onClick }) {
   const postcodes = useSelector((state) => state.postcodes);
   const distance = getDistanceBetween(user["postcode"], broker, postcodes.data);
   const handleGoToForm = () => {
+    window.parent.postMessage('requestcontact',"*");
     dispatch(update({ property: "broker", value: broker }));
     onClick(broker);
   };

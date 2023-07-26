@@ -50,6 +50,7 @@ export default function IndexPage() {
 
   const handlePostcodeSubmit = (event) => {
     event.preventDefault();
+    
     // Submit postcode and retrieve results
     if (postcodeIsValid) {
       dispatch(
@@ -63,6 +64,7 @@ export default function IndexPage() {
     } else {
       setResults([]);
     }
+    window.parent.postMessage('getstarted',"*");
     dispatch(nextStep());
   };
 

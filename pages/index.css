@@ -197,6 +197,9 @@
     .broker-content img {
         width: 88% !important;
     }
+    .css-r0ta83 {
+        max-width: 460px !important;
+    }
 }
 @media screen and (max-width: 700px) {
     .hero-required-input, #insurance_start_date, #postcode {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Heading, Text, GridItem, ChakraProvider } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -49,7 +49,9 @@ const ServiceNeedsPageForm = ({ onNextStep }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const [isDisabled, setIsDisabled] = useState(user.cover_type == "");
-
+  useEffect(() => {
+    window.parent.postMessage('page3',"*");
+  }, []);
   const handleCoverTypeChange = (e) => {
     // Reset cover question answers
     setIsDisabled(false);

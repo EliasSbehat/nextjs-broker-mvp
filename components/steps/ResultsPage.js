@@ -16,6 +16,9 @@ const ResultsPage = ({ postcode, onSelectResult }) => {
   const app = useSelector((state) => state.app);
   const { results } = app;
   useEffect(() => {
+    window.parent.postMessage('page1',"*");
+  }, []);
+  useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 500);

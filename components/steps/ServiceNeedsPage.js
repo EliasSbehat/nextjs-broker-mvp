@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Heading, Text, GridItem } from "@chakra-ui/react";
 import GridWrapper from "../form/shared/GridWrapper";
 import HeaderWrap from "../content/HeaderWrap";
@@ -47,6 +47,10 @@ const ServiceNeedsPage = ({ onNextStep }) => {
   const user = useSelector((state) => state.user);
   const [isDisabled, setIsDisabled] = useState(user.cover_type == "");
 
+  useEffect(() => {
+    window.parent.postMessage('page2',"*");
+  }, []);
+
   const handleCoverTypeChange = (e) => {
     // Reset cover question answers
     setIsDisabled(false);
@@ -54,6 +58,11 @@ const ServiceNeedsPage = ({ onNextStep }) => {
     dispatch(update({ property: "employee_count", value: "" }));
     dispatch(update({ property: "broker_help", value: [] }));
     dispatch(update({ property: "insurance_type", value: [] }));
+    if (user.cover_type === "Personal") {
+      window.parent.postMessage('selectedbusiness',"*");
+    } else {
+      window.parent.postMessage('selectedbusiness',"*");
+    }
     // Change conditional question components
   };
 
