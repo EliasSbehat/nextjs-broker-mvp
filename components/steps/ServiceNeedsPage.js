@@ -59,7 +59,7 @@ const ServiceNeedsPage = ({ onNextStep }) => {
     dispatch(update({ property: "broker_help", value: [] }));
     dispatch(update({ property: "insurance_type", value: [] }));
     if (user.cover_type === "Personal") {
-      window.parent.postMessage('selectedbusiness',"*");
+      window.parent.postMessage('selectedpersonal',"*");
     } else {
       window.parent.postMessage('selectedbusiness',"*");
     }
