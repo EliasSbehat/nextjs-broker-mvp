@@ -58,11 +58,6 @@ const ServiceNeedsPage = ({ onNextStep }) => {
     dispatch(update({ property: "employee_count", value: "" }));
     dispatch(update({ property: "broker_help", value: [] }));
     dispatch(update({ property: "insurance_type", value: [] }));
-    if (user.cover_type === "Personal") {
-      window.parent.postMessage('selectedpersonal',"*");
-    } else {
-      window.parent.postMessage('selectedbusiness',"*");
-    }
     // Change conditional question components
   };
 

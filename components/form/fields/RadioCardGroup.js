@@ -9,6 +9,14 @@ const RadioCardGroup = ({ options, groupName, onChange }) => {
   const handleChange = (value) => {
     dispatch(update({ property: groupName, value: value }));
     if (groupName == "cover_type") {
+      console.log(value, 'checking');
+      if (value == "Personal") {
+        console.log('selectedpersonal');
+        window.parent.postMessage('selectedpersonal',"*");
+      } else {
+        console.log('selectedbusiness');
+        window.parent.postMessage('selectedbusiness',"*");
+      }
       dispatch(updateQuestionsByCoverType(value));
       onChange();
     }
